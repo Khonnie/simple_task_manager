@@ -1,0 +1,94 @@
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: Sans-Serif;
+  background-color: lightblue;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container{
+  background-color: white;
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+}
+h1{
+  margin:20px;
+  color: lightblue;
+}
+.userinputs{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  width: 100%;
+}
+input{
+  margin-right: 5px;
+  outline: none;
+  border: 2px solid lightblue;
+  background-color: ;
+  border-radius: 5px;
+  padding: 6px;
+  width: 500px;
+}
+input:focus{
+  border: 2px solid blue;
+}
+.btn{
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  border: 0 solid lightblue;
+  background-color: lightblue;
+  color: white;
+  width:100px;
+}
+.btn:hover{
+  background-color: blue;
+}
+li{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 100px;
+  padding: 10px;
+  border-bottom: 1px dotted lightgrey;
+}
+.delbtn{
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+  border: 0 solid red;
+  width:60px;
+  padding: 3px;
+  margin: px;
+}
+.click {
+  cursor: pointer;
+  font-size: 20px;
+  color: green;
+  margin-right: 10px;
+}
+.click::after{
+  content: '';
+  border: 2px bold lightblue;
+  position: absolute;
+  
+}
+
+.completed{
+  text-decoration: line-through;
+  color: lightgrey;
+}
+.realtask{
+  flex: 1;
+  text-align: left;
+}
