@@ -1,94 +1,198 @@
-*{
-  margin:0;
+/* GLOBAL RESET */
+* {
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-body{
+
+/* BODY */
+body {
   font-family: Sans-Serif;
   background-color: lightblue;
-  height: 80vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.container{
+
+/* CONTAINER */
+.container {
   background-color: white;
   width: 100%;
   max-width: 500px;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-  padding: 10px;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
-h1{
-  margin:20px;
+
+/* HEADER */
+h1 {
+  margin-bottom: 20px;
   color: lightblue;
+  font-size: 28px;
 }
-.userinputs{
+
+/* INPUT SECTION */
+.userinputs {
   display: flex;
   justify-content: center;
-  margin-bottom: 20px;
   width: 100%;
+  margin-bottom: 20px;
 }
-input{
+
+input {
   margin-right: 5px;
   outline: none;
   border: 2px solid lightblue;
-  background-color: ;
   border-radius: 5px;
   padding: 6px;
-  width: 500px;
+  flex: 1;
+  min-width: 0;
 }
-input:focus{
+
+input:focus {
   border: 2px solid blue;
 }
-.btn{
+
+/* BUTTONS */
+.btn {
   border-radius: 5px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   border: 0 solid lightblue;
   background-color: lightblue;
   color: white;
-  width:100px;
+  padding: 6px 10px;
+  cursor: pointer;
 }
-.btn:hover{
+
+.btn:hover {
   background-color: blue;
 }
-li{
+
+/* TASK LIST */
+ul {
+  width: 100%;
+  list-style: none;
+}
+
+li {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 100px;
+  gap: 10px;
   padding: 10px;
-  border-bottom: 1px dotted lightgrey;
+  border-bottom: 2px dotted lightgrey;
 }
-.delbtn{
-  background-color: red;
-  color: white;
-  border-radius: 5px;
-  border: 0 solid red;
-  width:60px;
-  padding: 3px;
-  margin: px;
-}
+
+/* COMPLETE CHECKBOX */
 .click {
   cursor: pointer;
   font-size: 20px;
   color: green;
   margin-right: 10px;
 }
-.click::after{
-  content: '';
-  border: 2px bold lightblue;
-  position: absolute;
-  
-}
 
-.completed{
+.completed {
   text-decoration: line-through;
   color: lightgrey;
 }
-.realtask{
+
+/* TASK TEXT */
+.realtask {
   flex: 1;
   text-align: left;
+}
+
+/* DELETE BUTTON */
+.delbtn {
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+  border: 0;
+  padding: 5px 8px;
+  cursor: pointer;
+}
+
+.delbtn:hover {
+  background-color: darkred;
+}
+
+/* EDIT BUTTON */
+.editbtn {
+  background-color: orange;
+  color: white;
+  border-radius: 5px;
+  border: 0;
+  padding: 5px 8px;
+  cursor: pointer;
+}
+
+.editbtn:hover {
+  background-color: darkorange;
+}
+
+/* HIDDEN ELEMENT */
+.hidden {
+  display: none !important;
+}
+
+/* MODAL STYLES */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3); /* dark overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* MODAL BUTTONS */
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+#saveEdit {
+  background-color: lightgreen;
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+#saveEdit:hover {
+  background-color: green;
+}
+
+#cancelEdit {
+  background-color: lightcoral;
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+#cancelEdit:hover {
+  background-color: red;
 }

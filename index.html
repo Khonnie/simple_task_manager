@@ -4,20 +4,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./style.css">
-
-  <title>To do list </title>
+  <title>Simple Task Manager</title>
 </head>
 <body>
+
   <div class="container">
     <h1 class="design">Task Manager</h1>
+
     <div class="userinputs design">
       <input type="text" id="userinput" placeholder="what needs to be done?">
       <button id="addtask-btn" class="btn">Add Task</button>
     </div>
-    <ul id='tasklist'>
-      
-    </ul>
+
+    <ul id="tasklist"></ul>
   </div>
-    <script src="./script.js"></script>
+
+  <!-- EDIT TASK MODE -->
+  <div id="editModal" class="modal hidden">
+    <div class="modal-content">
+      <h3>Edit Task</h3>
+
+      <input type="text" id="editInput">
+
+      <div class="modal-actions">
+        <button id="saveEdit" class="btn">Save</button>
+        <button id="cancelEdit" class="btn">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
 </body>
 </html>
